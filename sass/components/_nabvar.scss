@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+:root{
+    --mainfont:'Space Grotesk', sans-serif;
+}
+body{
+    color: #fff;
+    background-color: #000000;
+    font-family: var(--mainfont);
+}
+ol,ul{
+    list-style: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+    line-height: 0.8;
+    font-family: var(--mainfont);
+}
+.container{
+    max-width: 1166px;
+    margin: 0 auto;
+    
+}
+h1{
+    font-size: 70px;
+}
+h2{
+    font-style: 36px;
+}
+h3{
+    font-size: 26px;
+}
+    
+/* ==========COMMON CSS ENDS============= */
+
+
+
+
+ 
+                /* ==========HEADER_PAET CSS ENDS============= */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    ul{
+        padding-left: 0;
+        li{
+            display: inline-block;
+            margin: 0 20px;
+            a{
+                text-transform: uppercase;
+                color: white;
+
+            }
+        }
+    }
+}
+
+                  /* ==========HEADER_PAET CSS ENDS============= */
+                  /* ==========BANNER CSS ENDS============= */
+#banner{
+    height: 100vh;
+    background: url(../images/banner.jpg) no-repeat;
+    background-position:top;
+    background-size:cover;
+    display: flex;
+    align-items: flex-end;
+    .banner_text{
+       text-align: center;
+       padding-bottom: 100px;
+       h1{
+           line-height: 80px;
+           font-weight: 300;
+           margin-bottom: 10px;
+       }
+
+    }
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    background-color: #fff;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    z-index: 9;
+    margin-top: 50px;
+    transition: all ease 0.5s;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color:black;
+        opacity: .9;
+        z-index: -1;
+        transition: all ease 0.5s;
+    }
+    &:hover{
+        color: #fff;
+    }
+    &:hover::before{
+        top: 0;
+        height: 100%;
+    }
+}
+
+ #brand_log{
+     .brand_logo_inner{
+         display: flex;
+         justify-content:space-between;
+         flex-wrap: wrap;
+         z-index: 99999999999999;
+     }
+ }
+                  /* ==========HEADER_PAET CSS ENDS============= */
+
+
+                  /* ==========SECTION PART CSS ENDS============= */
+#sec_1{
+    background: url(../images/overlay.png) no-repeat  center / cover;
+    position: relative;
+    padding: 80px 0;
+    margin-bottom: 50px;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(to left , transparent , #fff , transparent);
+      
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(to left , transparent , #fff , transparent);
+      
+    }
+    
+    h3{
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 40px;
+    }
+    p{
+        line-height: 32px;
+    }
+    .sec_1_inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .text{
+            width: 47%;
+        }
+        .text_left{
+            text-align: right;
+        }
+        .text_right{
+            text-align: left;
+        }
+    }
+  
+}
+                  /* ==========SECTION PART CSS ENDS============= */
+
+                  /* ==========SECTION_2 PART CSS ENDS============= */
+#sec_2{
+    padding: 100px 0 0;
+    position: relative;
+
+}
+.sec_2_inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .sec_2_img{
+        width: auto;
+    }
+    .sec_2_text{
+        width: 50%;
+        margin-left: -65px;
+        z-index: 9;
+        h2{
+            text-transform: uppercase;
+            line-height: 35px;
+        }
+        .sec_2_inner_text{
+            position: relative;
+            margin: 55px 0 0 190px;    
+        &::after{
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -30px;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to top , transparent , #fff , transparent);
+          
+        }
+       
+            p{
+                line-height: 30px;
+            }
+        }
+    
+    }
+  
+}
+.left_right_sec{
+    &:nth-child(even){
+        .sec_2_text{
+            margin-right: -65px;
+            text-align: right;
+        }
+        .sec_2_inner_text{
+            margin: 55px 190px 0 0;
+        }
+        .sec_2_inner_text{
+        &::after{
+           left: inherit;
+           right: -30px;
+        }
+        }
+    }
+}
+ 
+
+
+                  /* ==========SECTION_2 PART CSS ENDS============= */
+                  /* ==========SLIDER PART CSS ENDS============= */
+#slider{
+    padding: 150px 0px 0;
+    .slider_text{
+      h3{
+        text-transform: uppercase;
+        max-width: 50%;
+        line-height: 40px;
+        
+      }
+    }
+    .slider_main{
+        margin-top: 70px;
+    }
+}
+.slick-arrow{
+    position: absolute;
+    top: -160px;
+}
+.slick-prev{
+    left: inherit;
+    right: 180px;
+}
+.slick-next{
+    right: 90px;
+    
+}
+.slick-prev::before,
+.slick-next::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff url(../images/arrow-next.svg) no-repeat;
+    background-size: 14px;
+    background-position: center;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border: 1px solid white;
+    opacity: 1;
+     
+}
+.slick-prev::before{
+    background: transparent url(../images/arrow-prev.svg) no-repeat;
+    background-size: 14px;
+    background-position: center;
+    color: white;
+}
+
+                  /* ==========SLIDER PART CSS ENDS============= */
+                  /* ==========COLLECTION PART CSS ENDS============= */
+#collection{
+    padding:100px 0;
+    .collection_text{
+     h3{
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+     }     
+    }
+    .collecton_boxs{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 90px;
+        justify-content:space-between;
+  
+        .box{
+           position: relative;
+           display:flex;
+           align-items: center;
+           justify-content: center;
+           width: 23%;
+           min-height: 270px;
+           border: 1px solid white;
+           overflow: hidden;
+           margin-bottom: 40px;
+           h6{
+               font-family: var(--mainfont);
+               font-weight: 400;
+               font-size: 18px;
+           }
+           .collection_img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+            transition: all ease 1s;
+           }
+           &:hover .collection_img{
+            opacity: 1;
+           }
+        }
+    } 
+}
+                  /* ==========COLLECTION PART CSS ENDS============= */
+                  /* ==========FOOTER PART CSS ENDS============= */
+footer{
+    background: url(../images/overlay2.png) no-repeat center / cover;
+    position: relative;
+    padding: 50px 0;
+    &::before,
+    &::after
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(to left , transparent , #fff , transparent);
+      
+    }
+    &::after{
+        top: inherit;
+        bottom: 0;
+    }
+    .footer_inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .col{
+            margin-right: 50px;
+          ul{
+              margin-right: 0;
+              li{
+                  margin-bottom: 25px;
+                  a{
+                      color: white;
+                      font-size: 14px;
+
+                  }
+              }
+          }
+        }
+    }
+}
+.copy_rite{
+    padding: 25px 0;
+    text-align: center;
+    p{
+        font-size: 14px;
+    }
+}
+                  /* ==========FOOTER PART CSS ENDS============= */
